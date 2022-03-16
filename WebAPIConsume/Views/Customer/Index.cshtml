@@ -18,6 +18,8 @@
         </tr>
     </thead>
     <tbody>
+
+       if @Model != null {  @*added to avoid the error*@
         @foreach (var customer in Model)
         {
             <tr>
@@ -38,6 +40,8 @@
                     </form>
                 </td>
             </tr>
+        }
+
         }
     </tbody>
 </table>
