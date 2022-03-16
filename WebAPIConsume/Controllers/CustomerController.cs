@@ -49,6 +49,38 @@ namespace WebAPIConsume.Controllers
         }
 
 
+        [HttpGet] 
+        public ViewResult AddCustomer()
+        {
+           return View(); 
+
+        }
+
+        [HttpPost]
+        public async Task <IActionResult> AddCustomer(Customer customer)
+        {
+           if(ModelState.IsValid)  //server side validation
+            {
+                using (var httpClient = new HttpClient())
+                {
+
+                    StringContent content = new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json");
+                    using (var response = await httpClient.PostAsync("https://localhost:44318/api/Customer/", content))
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        customer = JsonConvert.DeserializeObject<Customer>(apiResponse);
+                    }
+                }
+                return View(customer);  //if valid
+            }
+
+            return View(); //empty view
+           
+
+        }
+
+
+
     }
 }
 

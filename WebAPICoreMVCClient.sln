@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{8C93F87A-0BC5-436C-99AE-1F13D75AFF9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIConsume", "WebAPIConsume\WebAPIConsume.csproj", "{75B22E1D-C99F-427D-96B7-340888F6D58B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPIConsume", "WebAPIConsume\WebAPIConsume.csproj", "{75B22E1D-C99F-427D-96B7-340888F6D58B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8C93F87A-0BC5-436C-99AE-1F13D75AFF9D} = {8C93F87A-0BC5-436C-99AE-1F13D75AFF9D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
