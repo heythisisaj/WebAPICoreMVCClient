@@ -1,0 +1,12 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace WebAPI.Controllers
+{
+    public class HomeController : ControllerBase
+    {
+        public string Index()
+        {
+            return "API is running....";
+        }
+    }
+}
