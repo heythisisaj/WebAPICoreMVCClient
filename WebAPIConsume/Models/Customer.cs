@@ -9,7 +9,7 @@ namespace WebAPIConsume.Models
     public class Customer
     {
         
-        public int? Id { get; set; }
+        public int Id { get; set; }
         [Required(ErrorMessage ="Please put a Name")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Please put an address")]
