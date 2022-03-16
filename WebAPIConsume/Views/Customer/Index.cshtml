@@ -19,7 +19,8 @@
     </thead>
     <tbody>
 
-       if @Model != null {  @*added to avoid the error*@
+       @if (Model != null)   {
+           @*added to avoid the error*@
         @foreach (var customer in Model)
         {
             <tr>
