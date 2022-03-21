@@ -8,7 +8,7 @@
 <table class="table table-sm table-striped table-bordered m-2">
     <thead>
         <tr>
-            <th>ID</th>
+            <th>@Html.ActionLink("Id", "Index", new { sortOrder = ViewBag.IdSortParm })</th>
             <th>Name</th>
             <th>Address</th>
             <th>Telephone</th>
@@ -31,13 +31,13 @@
                 <td>@customer.Email</td>
                 <td>
                     <a asp-action="UpdateCustomer" asp-route-id="@customer.Id">
-                        <img src="/icon/edit.png" />
+                        <img src="/icon/edit.svg" />
                     </a>
                 </td>
                 <td>
                     <form asp-action="DeleteCustomer" method="post">
                         <input type="hidden" value="@customer.Id" name="id" />
-                        <input type="image" src="/icon/close.png" />
+                        <input type="image" src="/icon/trash-2.svg" />
                     </form>
                 </td>
             </tr>
